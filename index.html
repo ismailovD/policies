@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Document</title>
+    </head>
+    <body class="return__body">
+
+
+
+        <aside class="return__aside">
+            <img src="./images/side-bar.webp" class="return__side-bar"
+                alt="side-bar">
+        </aside>
+        <div class="over__box"></div>
+        <div class="side-bar__btn">
+            <img src="./images/logo.webp" alt="" class="side-bar__img">
+        </div>
+        <div class="return__content">
+            <header class="return__header">
+                <form class="return__form">
+                    <label class="return__search">
+                        <svg class="return__search-icon">
+                            <use xlink:href="./svg/sprite.svg#search"></use>
+                        </svg>
+                        <input class="return__search-input" type="text"
+                            placeholder="Search...">
+                    </label>
+                    <div class="return__notification">
+                        <svg class="return__notification-icon">
+                            <use xlink:href="./svg/sprite.svg#bell"></use>
+                        </svg>
+                        <span class="return__notification-count">6</span>
+                    </div>
+                </form>
+                <div class="return__auth user">
+                    <div class="user__avatar">
+                        <img src="./images/avatar.webp" alt="ava"
+                            class="user__img">
+                    </div>
+                    <p class="user__name">Ronnie <span
+                            class="user__second-name">Woodkin</span></p>
+                </div>
+            </header>
+
+
+            <main class="policies__main">
+                <div class="policies__top-panel">
+                    <h1 class="policies__title">Return Policies</h1>
+                    <div class="policies__create-remove">
+                        <svg class="policies__delete">
+                            <use xlink:href="./svg/sprite.svg#delete"></use>
+                        </svg>
+                        <a href="./pages/add-policy.html" class="policies__add">Add
+                            new policy</a>
+                    </div>
+                </div>
+                <div class="table__inner"> 
+                    <table class="policies__table table">
+                        <tbody>
+                            <tr class="table__row-titles">
+                                <th class="table__title">
+                                    <div class="table__checkbox">
+                                        <input id="all-check" type="checkbox">
+                                        <span class="policy__check">
+                                            <svg class="policy__check-icon">
+                                                <use
+                                                    xlink:href="./svg/sprite.svg#choose"></use>
+                                            </svg>
+                                        </span>
+                                        <label for="all-check"
+                                            class="table__label">
+                                            Policy name
+                                        </label>
+                                    </div>
+                                </th>
+                                <th class="table__title">Condition (S)</th>
+                                <th class="table__title">Parameters</th>
+                                <th class="table__title">Action</th>
+                                <th class="table__title">Parameters</th>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell table__policy">
+                                    <div class="table__checkbox">
+                                        <input id="checked-1" type="checkbox"
+                                            class="table__check-input">
+                                        <span class="policy__check">
+                                            <svg class="policy__check-icon">
+                                                <use
+                                                    xlink:href="./svg/sprite.svg#choose"></use>
+                                            </svg>
+                                        </span>
+                                        <label for="checked-1"
+                                            class="table__label">
+                                            Custom order
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="table__cell table__condition">
+                                    Location
+                                    has and Payment method is </td>
+                                <td class="table__cell table__parameters">City
+                                    as
+                                    Denver COD</td>
+                                <td class="table__cell">
+                                    <div class="select">
+                                        <button class="select__btn">Select
+                                        </button>
+                                        <svg class="select__icon">
+                                            <use
+                                                xlink:href="./svg/sprite.svg#arrow-down"></use>
+                                        </svg>
+                                        <ul class="select__list">
+                                            <li class="select__item"
+                                                data-value="Do not accept">Do
+                                                not
+                                                accept</li>
+                                            <li class="select__item"
+                                                data-value="Only Return">Only
+                                                Return</li>
+                                            <li class="select__item"
+                                                data-value="Only Exchange">Only
+                                                Exchange</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="table__cell"><a href="#!"
+                                        class="table__edit">Edit</a></td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell table__policy">
+                                    <div class="table__checkbox">
+                                        <input id="checked-2" type="checkbox"
+                                            class="table__check-input">
+                                        <span class="policy__check">
+                                            <svg class="policy__check-icon">
+                                                <use
+                                                    xlink:href="./svg/sprite.svg#choose"></use>
+                                            </svg>
+                                        </span>
+                                        <label for="checked-2"
+                                            class="table__label">
+                                            Black Friday Sale
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="table__cell table__condition">Product
+                                    tag
+                                    contains </td>
+                                <td class="table__cell table__parameters">Black
+                                    Friday</td>
+                                <td class="table__cell">
+                                    <div class="select">
+                                        <button class="select__btn">Select
+                                        </button>
+                                        <svg class="select__icon">
+                                            <use
+                                                xlink:href="./svg/sprite.svg#arrow-down"></use>
+                                        </svg>
+                                        <ul class="select__list">
+                                            <li class="select__item"
+                                                data-value="Do not accept">Do
+                                                not
+                                                accept</li>
+                                            <li class="select__item"
+                                                data-value="Only Return">Only
+                                                Return</li>
+                                            <li class="select__item"
+                                                data-value="Only Exchange">Only
+                                                Exchange</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="table__cell"><a href="#!"
+                                        class="table__edit">Edit</a></td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell table__policy">
+                                    <div class="table__checkbox">
+                                        <input id="checked-3" type="checkbox"
+                                            class="table__check-input">
+                                        <span class="policy__check">
+                                            <svg class="policy__check-icon">
+                                                <use
+                                                    xlink:href="./svg/sprite.svg#choose"></use>
+                                            </svg>
+                                        </span>
+                                        <label for="checked-3"
+                                            class="table__label">
+                                            Electronic Category
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="table__cell table__condition">
+                                    Product
+                                    tag contains </td>
+                                <td class="table__cell table__parameters">Electronics</td>
+                                <td class="table__cell">
+                                    <div class="select">
+                                        <button class="select__btn">Select
+                                        </button>
+                                        <svg class="select__icon">
+                                            <use
+                                                xlink:href="./svg/sprite.svg#arrow-down"></use>
+                                        </svg>
+                                        <ul class="select__list">
+                                            <li class="select__item"
+                                                data-value="Do not accept">Do
+                                                not
+                                                accept</li>
+                                            <li class="select__item"
+                                                data-value="Only Return">Only
+                                                Return</li>
+                                            <li class="select__item"
+                                                data-value="Only Exchange">Only
+                                                Exchange</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="table__cell"><a href="#!"
+                                        class="table__edit">Edit</a></td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell table__policy">
+                                    <div class="table__checkbox">
+                                        <input id="checked-4" type="checkbox"
+                                            class="table__check-input">
+                                        <span class="policy__check">
+                                            <svg class="policy__check-icon">
+                                                <use
+                                                    xlink:href="./svg/sprite.svg#choose"></use>
+                                            </svg>
+                                        </span>
+                                        <label for="checked-4"
+                                            class="table__label">
+                                            Duration
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="table__cell table__condition"> Order
+                                    date
+                                    is more than </td>
+                                <td class="table__cell table__parameters">7 days
+                                    earlier</td>
+                                <td class="table__cell">
+                                    <div class="select">
+                                        <button class="select__btn">Select
+                                        </button>
+                                        <svg class="select__icon">
+                                            <use
+                                                xlink:href="./svg/sprite.svg#arrow-down"></use>
+                                        </svg>
+                                        <ul class="select__list">
+                                            <li class="select__item"
+                                                data-value="Do not accept">Do
+                                                not
+                                                accept</li>
+                                            <li class="select__item"
+                                                data-value="Only Return">Only
+                                                Return</li>
+                                            <li class="select__item"
+                                                data-value="Only Exchange">Only
+                                                Exchange</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="table__cell"><a href="#!"
+                                        class="table__edit">Edit</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer class="return__footer">
+                <ul class="return__pages">
+                    <li class="return__pages-num curent__page"><a href="#!"
+                            class="return__pages-link">1</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">2</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">3</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">4</a></li>
+                    <li class="return__pages-num page__points"><a href="#!"
+                            class="return__pages-link">...</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">10</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">11</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">12</a></li>
+                    <li class="return__pages-num"><a href="#!"
+                            class="return__pages-link">13</a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
