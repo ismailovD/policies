@@ -5,10 +5,11 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         selectBtns = document.querySelectorAll('.select__btn'),
         selectParent = '.select',
         selectItems = document.querySelectorAll('.select__item'),
-        renamePolicy = document.querySelector('.policy__edit'),
+        renamePolicy = document.querySelector('.policy__edit-icon'),
         namePolicy = document.querySelector('.policy__name'),
         policyItems = document.querySelectorAll('.commonly__item'),
-        policyScroll = document.querySelector('.commonly__list');
+        policyScroll = document.querySelector('.commonly__list'),
+        samplesAdd  = document.querySelectorAll('.commonly__item-plus');
 
  
     
@@ -63,7 +64,46 @@ listHeight()
 window.addEventListener('resize', () => {
     listHeight();
 })
+let clicked = true;
 renamePolicy.addEventListener('click', () => {
-     let str = prompt("New name policy").trim()
-    namePolicy.innerHTML = str.charAt(0).toUpperCase() + str.slice(1)
+    if(clicked){
+        console.log(clicked, "0");
+        namePolicy.classList.add('rename')
+        clicked = false;
+        namePolicy.setAttribute('contenteditable', true);
+        namePolicy.addEventListener('keydown', (e) => {
+            if(e.keyCode === 13 ){  
+                console.log(clicked, "1"); 
+                rename ()   
+            }
+        })
+        
+    }else {  
+        console.log(clicked, "2");
+        rename ()
+    }
+   
+   
+})
+
+function rename() {
+        clicked = true;
+        let newName = namePolicy.innerHTML.replace(/\&nbsp;/g,'').trim() 
+        if(newName === ""){
+            namePolicy.innerHTML = namePolicy.getAttribute('data-default-name')
+        }else {
+            newName = newName.charAt(0).toUpperCase() + newName.slice(1);
+            namePolicy.innerHTML = newName
+        }
+        namePolicy.removeAttribute('contenteditable'); 
+        namePolicy.classList.remove('rename'); 
+        console.log(clicked, "3");
+        return
+}
+
+
+samplesAdd.forEach(sample => {
+    sample.addEventListener('click', () => {
+        namePolicy.innerHTML = sample.previousElementSibling.innerHTML
+    })
 })

@@ -659,32 +659,22 @@ body {
     line-height: 36px;
     color: var(--blue);
     margin-right: 18px;
+    border: none;  
+    padding:0 5px; 
+}
+.policy__name.rename {
+    outline: 2px solid var(--blue);
+    border-radius: 3px;
+  
 }
 .policy__edit{
     position: relative;
 }
-.policy__edit:hover .policy__edit-prompt {
-    display: inline-block;
-}
-.policy__edit-prompt {
-    font-family: var(--f400-lato);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    background: var(--white);
-    color: var(--dark-purple);
-    border: 1px solid var(--purple);
-    border-radius: 3px;
-    padding: 5px 10px;
-    position: absolute;
-    left: 100%;
-    top: -100%; 
-    width: 150px;
-    display: none;
-}
+ 
+ 
 .policy__edit-icon {
     width: 24px;
-    height: 24px;
+    height: 36px;
     fill: none;
     stroke: var(--purple);
     cursor: pointer;
@@ -770,11 +760,22 @@ body {
     border-radius: 3px;
     border: none; 
     cursor: pointer;
+    width: fit-content;
+}
+.policy__save:first-child {
+    margin-bottom: 10px;
+}
+.policy__save:last-child {
+    background: var(--red);
 }
 .policy__save:hover {
     box-shadow: var(--btn-shadow);
 }
-
+.policy__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (max-width: 1500px) {
      .policy__create {
