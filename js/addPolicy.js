@@ -11,7 +11,32 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         policyScroll = document.querySelector('.commonly__list'),
         samplesAdd  = document.querySelectorAll('.commonly__item-plus');
 
- 
+const policies = {
+    sale: {
+        name: "Sale",
+        select1: "Do not accept",
+        select2: "Only Return",
+        select3: "Only Exchange"
+    },
+    value: {
+        name: "Value",
+        select1: "Only Return",
+        select2: "Do not accept",
+        select3: "Only Return"
+    },
+    country: {
+        name: "Country",
+        select1: "Only Exchange",
+        select2: "Do not accept",
+        select3: "Only Return"
+    },
+    time: {
+        name: "Time",
+        select1: "Do not accept",
+        select2: "Only Exchange",
+        select3: "Do not accept"
+    },
+} 
     
 sideBarBtn.addEventListener('click', () => {
     sideBar.classList.toggle('active'); 
@@ -104,6 +129,11 @@ function rename() {
 
 samplesAdd.forEach(sample => {
     sample.addEventListener('click', () => {
-        namePolicy.innerHTML = sample.previousElementSibling.innerHTML
+        let example = sample.closest('.commonly__item').getAttribute('data-policy'),
+            selects = document.querySelectorAll(selectParent); 
+        namePolicy.innerHTML = policies[example].name; 
+        for(let i = 0; i < selects.length; i++){
+            selects[i].querySelector('.select__btn').textContent = policies[example]["select"+ [i+1]]
+        } 
     })
 })
