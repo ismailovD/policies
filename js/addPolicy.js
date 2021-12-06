@@ -1,16 +1,36 @@
 const   sideBarBtn = document.querySelector('.side-bar__btn'),
-        sideBar = document.querySelector('.return__aside'),
-        closeSideBar = document.querySelector('.over__box'),
-        body = document.querySelector('.return__body'),
+        sideBar = document.querySelector('.side-bar'), 
+        pageContent =document.querySelector('.global__content'), 
+        dropdownWindow = document.querySelector('.side-bar__dropdown'),
+        dropdownBtn = document.querySelector('.side-bar__dropdown-btn'), 
         selectBtns = document.querySelectorAll('.select__btn'),
         selectParent = '.select',
         selectItems = document.querySelectorAll('.select__item'),
+        addPolicyContent = document.querySelector('.add-policy');
         renamePolicy = document.querySelector('.policy__edit-icon'),
         namePolicy = document.querySelector('.policy__name'),
         policyItems = document.querySelectorAll('.commonly__item'),
         policyScroll = document.querySelector('.commonly__list'),
         samplesAdd  = document.querySelectorAll('.commonly__item-plus');
 
+
+sideBarBtn.addEventListener('click', () => {
+    sideBar.classList.toggle('active'); 
+        if(sideBar.classList.contains('active')){  
+            pageContent.style.marginLeft = "275px"; 
+            addPolicyContent.classList.add('change')
+    }else {  
+        dropdownWindow.classList.remove('active')
+        pageContent.style.marginLeft = "65px";  
+        addPolicyContent.classList.remove('change')
+    }
+}); 
+dropdownBtn.addEventListener('click', () => {
+    dropdownWindow.classList.toggle('active'); 
+    if(dropdownWindow.classList.contains('active')){
+        sideBar.classList.add('change-height')
+    }else sideBar.classList.remove('change-height')
+})
 const policies = {
     sale: {
         name: "Sale",
@@ -38,17 +58,7 @@ const policies = {
     },
 } 
     
-sideBarBtn.addEventListener('click', () => {
-    sideBar.classList.toggle('active'); 
-    body.style.overflow ="hidden"
-});
-closeSideBar.addEventListener('click', (e) => {
-     if(e.target == closeSideBar){
-        sideBar.classList.remove('active'); 
-        body.style.overflow ="visible"
-     }
- })
-
+  
 selectBtns.forEach(btn => { 
     btn.addEventListener('click', () => {  
         document.querySelectorAll(selectParent).forEach(parent => {
