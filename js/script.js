@@ -15,7 +15,23 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         deletePolicy = document.querySelector('.policies__delete'),
         tableRow = '.table__row',
         renamePolicy = document.querySelector('.policy__edit'),
-        namePolicy = document.querySelector('.policy__name');
+        namePolicy = document.querySelector('.policy__name'),
+        globalSearch = document.querySelector('.global__search-input'),
+        globalSearchDropdown = document.querySelector('.global__search-dropdown');
+        
+globalSearch.addEventListener('input', () => { 
+    if(globalSearch.value.length > 0){
+        globalSearchDropdown.classList.add('active');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.add('show');
+        }, 100)
+    }else {
+        globalSearchDropdown.classList.remove('show');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.remove('active');
+        }, 100)
+    }
+}) 
  
     
 sideBarBtn.addEventListener('click', () => {

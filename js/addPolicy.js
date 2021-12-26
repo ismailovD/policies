@@ -15,7 +15,23 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         namePolicy = document.querySelector('.policy__name'),
         policyItems = document.querySelectorAll('.commonly__item'),
         policyScroll = document.querySelector('.commonly__list'),
-        samplesAdd  = document.querySelectorAll('.commonly__item-plus');
+        samplesAdd  = document.querySelectorAll('.commonly__item-plus'),
+        globalSearch = document.querySelector('.global__search-input'),
+        globalSearchDropdown = document.querySelector('.global__search-dropdown');
+        
+globalSearch.addEventListener('input', () => { 
+    if(globalSearch.value.length > 0){
+        globalSearchDropdown.classList.add('active');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.add('show');
+        }, 100)
+    }else {
+        globalSearchDropdown.classList.remove('show');
+        setTimeout(()=> {
+            globalSearchDropdown.classList.remove('active');
+        }, 100)
+    }
+}) 
 
 
 sideBarBtn.addEventListener('click', () => {
